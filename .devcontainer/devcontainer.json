@@ -1,0 +1,15 @@
+{
+  "name": "PureScript Development Environment",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "purescript.purescript-vscode",  // PureScript syntax highlighting and other features
+        "ms-vscode.cpptools"             // C++ support if needed (useful for ffi)
+      ]
+    }
+  },
+  "postCreateCommand": "spago install",  // Install project dependencies after the environment is set up
+  "settings": {
+    "editor.formatOnSave": true  // Enable automatic formatting
+  }
+}
