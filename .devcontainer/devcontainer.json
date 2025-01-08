@@ -8,8 +8,14 @@
       ]
     }
   },
-  "postCreateCommand": "spago install",  // Install project dependencies after the environment is set up
+  "postCreateCommand": [
+    "npm install -g purescript psci spago@next",
+    "spago install"  // Install project dependencies after the environment is set up
+  ],
   "settings": {
-    "editor.formatOnSave": true  // Enable automatic formatting
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnSave": true,  // Enable automatic formatting
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
   }
 }
